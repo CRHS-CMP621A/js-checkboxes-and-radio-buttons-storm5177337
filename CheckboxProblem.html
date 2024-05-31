@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Checkbox Problem</title>
-    <script>
-      //need code here
-    </script>
-  </head>
-  <body>
-    <form>
-      <!-- need code here-->
-    </form>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Checkbox Problem</title>
+  <script>
+    //need code here
+    function btnAlerts() {
+      let scriptChk = document.querySelector("#scriptChkBox").checked
+      let pythonChk = document.querySelector("#pythonChkBox").checked
+      let javaChk = document.querySelector("#javaChkBox").checked
+
+      if (scriptChk == true) {
+        alert("You Like JavaScript!")
+      }
+      if (pythonChk == true) {
+        alert("You Like Python!")
+      }
+      if (javaChk == true) {
+        alert("You Like Java!")
+      }
+    }
+
+    function reset() {
+      form.reset();
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <!-- need code here-->
+    <p>Please select your favorite programming language(s).</p>
+    <p>Javascript: <input type="checkbox" id="scriptChkBox" name="" value="">
+      Python: <input type="checkbox" id="pythonChkBox" name="" value="">
+      Java: <input type="checkbox" id="javaChkBox" name="" value=""></p>
+
+    <button type="button" onClick="btnAlerts()">Check Results</button>
+    <button type="button" onClick="reset()">Reset</button>
+  </form>
+</body>
+
 </html>

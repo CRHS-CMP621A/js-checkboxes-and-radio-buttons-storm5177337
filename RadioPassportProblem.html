@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Radio Passport Problem</title>
-    <script>
-      //need code here
-    </script>
-    <style>
-      /* need code here */
-    </style>
-  </head>
-  <body>
-    <!--need code here-->
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Radio Passport Problem</title>
+  <script>
+    //need code here
+    function choice(value) {
+      if (value === "Yes") {
+        document.querySelector(".passNumDiv").style.display = "block";
+      } else {
+        document.querySelector(".passNumDiv").style.display = "none";
+      }
+    }
+  </script>
+  <style>
+    /* need code here */
+    .colour {
+      font-size: 15px;
+      color: blue;
+      font-weight: bold;
+      border-color: blue;
+    }
+
+    .passNumDiv {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!--need code here-->
+  <p class="colour">Do you have a passport?
+    <input type="radio" onClick="choice(this.value)" name="passport" value="Yes">Yes
+    <input type="radio" onClick="choice(this.value)" name="passport" value="No" checked>No
+  </p>
+
+  <hr class="colour">
+
+  <div class="passNumDiv">
+    <span class="colour">Passport Number</span>
+    <input type="text" name="" value="">
+  </div>
+</body>
+
 </html>

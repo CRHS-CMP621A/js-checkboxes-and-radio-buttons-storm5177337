@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Checkbox Example 4</title>
-    <script>
-      function lights() {
-             //need code here
-             let lightCheck = document.querySelector("#lightChkBox").checked;
-             
-       }      
-    </script>
-  </head>
-  <body>
-    <form>
-      Light Switch: <input type="checkbox" id="lightChkBox" onClick="lights()" name="" value="">
-    </form>
-  </body>
-</html>
 
+<head>
+  <meta charset="utf-8">
+  <title>Checkbox Example 4</title>
+  <script>
+    function lights() {
+      //need code here
+      let lightCheck = document.querySelector("#lightChkBox").checked;
+      if (lightCheck == true) {
+        document.body.style.backgroundColor = "black"
+      } else if (lightCheck == false) {
+        document.body.style.backgroundColor = "white"
+
+      }
+    }      
+  </script>
+</head>
+
+<body>
+  <form>
+    Light Switch: <input type="checkbox" id="lightChkBox" onClick="lights()" name="" value="">
+  </form>
+</body>
+
+</html>
